@@ -31,7 +31,8 @@
     "release": "turbo run build && changeset publish",
     "prepare": "husky",
     "validate": "turbo run lint typecheck build test && bun run format:check",
-    "validate:ci": "turbo run lint typecheck build test"
+    "validate:ci": "turbo run lint typecheck build test",
+    "constitution:audit": "node scripts/ci/constitution-audit.mjs"
   },
   "devDependencies": {
     "@campusos/eslint-config": "workspace:*",
