@@ -1,0 +1,31 @@
+{
+  "name": "@campusos/web",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Next.js primary web application",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "lint": "eslint src --max-warnings 0",
+    "lint:fix": "eslint src --fix --max-warnings 0",
+    "typecheck": "tsc -b --emitDeclarationOnly false --noEmit",
+    "test": "node --input-type=module -e \"process.exit(0)\"",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@campusos/eslint-config": "workspace:*",
+    "@campusos/typescript-config": "workspace:*",
+    "eslint": "^9.22.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.2"
+  }
+}

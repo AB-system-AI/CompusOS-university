@@ -1,0 +1,86 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tooling/typescript-config"
+    },
+    {
+      "path": "./tooling/eslint-config"
+    },
+    {
+      "path": "./packages/config"
+    },
+    {
+      "path": "./packages/common"
+    },
+    {
+      "path": "./packages/events"
+    },
+    {
+      "path": "./packages/auth"
+    },
+    {
+      "path": "./packages/i18n"
+    },
+    {
+      "path": "./packages/api-client"
+    },
+    {
+      "path": "./packages/database"
+    },
+    {
+      "path": "./packages/proto"
+    },
+    {
+      "path": "./packages/testing"
+    },
+    {
+      "path": "./packages/ui"
+    },
+    {
+      "path": "./apps/web"
+    },
+    {
+      "path": "./apps/admin"
+    },
+    {
+      "path": "./apps/cms"
+    },
+    {
+      "path": "./apps/mobile"
+    },
+    {
+      "path": "./apps/api-gateway"
+    },
+    {
+      "path": "./services/identity"
+    },
+    {
+      "path": "./services/tenant"
+    },
+    {
+      "path": "./services/communicate"
+    },
+    {
+      "path": "./services/content"
+    },
+    {
+      "path": "./services/trust"
+    },
+    {
+      "path": "./services/platform"
+    },
+    {
+      "path": "./services/insight"
+    },
+    {
+      "path": "./services/search"
+    },
+    {
+      "path": "./services/web"
+    },
+    {
+      "path": "./services/ai-gateway"
+    }
+  ]
+}

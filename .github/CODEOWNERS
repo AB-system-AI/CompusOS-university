@@ -1,0 +1,43 @@
+# See CEC §3.8 — CODEOWNERS (Mandatory Paths)
+
+# Default
+* @campusos/team-platform
+
+# Apps
+/apps/web/ @campusos/team-frontend
+/apps/admin/ @campusos/team-frontend
+/apps/cms/ @campusos/team-frontend
+/apps/mobile/ @campusos/team-frontend
+/apps/api-gateway/ @campusos/team-devops
+
+# Services — Phase 1 Genesis
+/services/identity/ @campusos/team-identity
+/services/tenant/ @campusos/team-platform
+/services/communicate/ @campusos/team-platform
+/services/content/ @campusos/team-platform
+/services/trust/ @campusos/team-security
+/services/platform/ @campusos/team-platform
+/services/insight/ @campusos/team-data
+/services/search/ @campusos/team-search
+/services/web/ @campusos/team-frontend
+
+# Packages
+/packages/ui/ @campusos/team-frontend
+/packages/common/ @campusos/team-platform
+/packages/events/ @campusos/team-platform
+/packages/auth/ @campusos/team-identity
+/packages/database/ @campusos/team-platform
+/packages/proto/ @campusos/team-platform
+
+# Infrastructure & DevOps
+/infra/ @campusos/team-devops
+/deploy/ @campusos/team-devops
+/.github/workflows/ @campusos/team-devops
+
+# Documentation & Governance
+/docs/constitution/ @campusos/team-architecture
+/docs/architecture/adr/ @campusos/team-architecture
+/docs/security/ @campusos/team-security
+
+# Tooling
+/tooling/ @campusos/team-platform

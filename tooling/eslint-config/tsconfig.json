@@ -1,0 +1,9 @@
+{
+  "extends": "@campusos/typescript-config/node.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist",
+    "rootDir": "."
+  },
+  "include": ["index.js"]
+}

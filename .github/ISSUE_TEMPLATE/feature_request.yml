@@ -1,0 +1,37 @@
+name: Feature Request
+description: Propose a new feature aligned with MBC roadmap
+title: '[Feature]: '
+labels: ['type:feature', 'triage']
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+    validations:
+      required: true
+  - type: input
+    id: module
+    attributes:
+      label: MBC Module
+      description: Which module does this relate to? (e.g. IdentityOS, SearchOS)
+  - type: input
+    id: version
+    attributes:
+      label: Target Version
+      placeholder: e.g. v1.0, v2.0
+  - type: checkboxes
+    id: compliance
+    attributes:
+      label: Constitutional Alignment
+      options:
+        - label: Aligns with MBC v1.1.0 module registry
+        - label: Requires ADR
+        - label: Requires API contract
+        - label: Requires event catalog entry

@@ -1,0 +1,65 @@
+{
+  "name": "campusos-platform",
+  "version": "0.0.0",
+  "private": true,
+  "description": "CampusOS - The Intelligent University Operating System",
+  "license": "UNLICENSED",
+  "type": "module",
+  "author": "CampusOS Engineering",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/campusos/campusos-platform.git"
+  },
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "clean": "turbo run clean && rimraf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build && changeset publish",
+    "prepare": "husky",
+    "validate": "turbo run lint typecheck build test && bun run format:check",
+    "validate:ci": "turbo run lint typecheck build test"
+  },
+  "devDependencies": {
+    "@campusos/eslint-config": "workspace:*",
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^2.29.0",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.22.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.4.4",
+    "typescript": "^5.8.2"
+  },
+  "packageManager": "bun@1.2.4",
+  "engines": {
+    "node": ">=22.0.0",
+    "bun": ">=1.2.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix --max-warnings 0 --no-warn-ignored",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}

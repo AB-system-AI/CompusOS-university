@@ -1,0 +1,41 @@
+name: ADR Proposal
+description: Propose an Architecture Decision Record
+title: '[ADR]: '
+labels: ['type:adr', 'governance']
+body:
+  - type: input
+    id: adr-title
+    attributes:
+      label: ADR Title
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What is the issue motivating this decision?
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Proposed Decision
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact Level
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true

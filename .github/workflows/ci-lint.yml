@@ -1,0 +1,26 @@
+name: GitHub Actions — CI Lint
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-lint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint & Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.2.4
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+      - name: ESLint
+        run: bun run lint
+      - name: Prettier check
+        run: bun run format:check

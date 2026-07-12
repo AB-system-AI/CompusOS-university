@@ -1,0 +1,18 @@
+[
+  { "name": "type:bug", "color": "d73a4a", "description": "Something is not working" },
+  { "name": "type:feature", "color": "a2eeef", "description": "New feature or request" },
+  { "name": "type:chore", "color": "fef2c0", "description": "Maintenance and tooling" },
+  { "name": "type:docs", "color": "0075ca", "description": "Documentation improvements" },
+  { "name": "type:adr", "color": "5319e7", "description": "Architecture Decision Record" },
+  { "name": "type:security", "color": "b60205", "description": "Security related" },
+  { "name": "priority:p0", "color": "b60205", "description": "Critical priority" },
+  { "name": "priority:p1", "color": "d93f0b", "description": "High priority" },
+  { "name": "priority:p2", "color": "fbca04", "description": "Medium priority" },
+  { "name": "priority:p3", "color": "0e8a16", "description": "Low priority" },
+  { "name": "genesis", "color": "1d76db", "description": "Phase 1 Genesis work" },
+  { "name": "dependencies", "color": "0366d6", "description": "Dependency updates" },
+  { "name": "ci", "color": "006b75", "description": "CI/CD changes" },
+  { "name": "breaking", "color": "e11d21", "description": "Breaking change" },
+  { "name": "triage", "color": "ededed", "description": "Needs triage" },
+  { "name": "governance", "color": "5319e7", "description": "Constitutional governance" }
+]
