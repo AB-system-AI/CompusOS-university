@@ -4,6 +4,19 @@
 
 Enterprise-grade, cloud-native, AI-first, multi-tenant university platform.
 
+## Genesis Foundation Status
+
+**G-001: CLOSED** — Repository foundation implemented and validated.
+
+| Component                           | Status |
+| ----------------------------------- | ------ |
+| Bun workspace (27 packages)         | Active |
+| Turborepo orchestration             | Active |
+| TypeScript project references       | Active |
+| Constitutional ESLint (FF-PERF-006) | Active |
+| GitHub Actions CI                   | Active |
+| Husky + Commitlint + lint-staged    | Active |
+
 ## Constitutional Authority
 
 | Document | Version |
@@ -13,30 +26,41 @@ Enterprise-grade, cloud-native, AI-first, multi-tenant university platform.
 | EAP      | v1.0.0  |
 | EDS      | v1.0.0  |
 
-## Repository Structure
+## Monorepo Architecture
+
+CampusOS uses a **Bun workspace** monorepo orchestrated by **Turborepo**.
 
 ```
-apps/          # Next.js portals and API gateway config
-services/      # Genesis microservices (NestJS placeholders)
-packages/      # Shared libraries (@campusos/*)
+apps/          # 5 Next.js portals and API gateway config
+services/      # 10 Genesis microservice placeholders
+packages/      # 10 shared @campusos/* libraries
+tooling/       # 2 shared config packages (ESLint, TypeScript)
 infra/         # Terraform, Kubernetes, Docker (placeholders)
 deploy/        # Helm and ArgoCD (placeholders)
 docs/          # Architecture and runbooks (placeholders)
 scripts/       # CI and operational scripts
-tooling/       # ESLint, TypeScript, and tooling packages
 tests/         # E2E, contract, performance, chaos (placeholders)
 examples/      # API usage examples (placeholders)
 ```
 
+### Workspace Breakdown (27 total)
+
+| Type     | Count |
+| -------- | ----: |
+| packages |    10 |
+| apps     |     5 |
+| services |    10 |
+| tooling  |     2 |
+
 ## Workspace Aliases
 
-All workspaces use the `@campusos/*` scope. Import packages by name:
+All workspaces use the `@campusos/*` scope:
 
 ```typescript
 import { GENESIS_VERSION } from '@campusos/common';
 ```
 
-TypeScript path aliases are configured in `tsconfig.base.json` for IDE resolution.
+TypeScript path aliases are configured in `tsconfig.base.json`.
 
 ## Quick Start
 
@@ -59,4 +83,4 @@ bun run validate
 
 ## License
 
-Proprietary - see LICENSE.
+Proprietary — see [LICENSE](LICENSE).

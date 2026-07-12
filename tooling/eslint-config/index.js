@@ -16,7 +16,6 @@ const campusosEslintConfig = tseslint.config(
       '**/coverage/**',
       '**/.next/**',
       '**/bun.lock',
-      'commitlint.config.js',
     ],
   },
   js.configs.recommended,
@@ -76,7 +75,7 @@ const campusosEslintConfig = tseslint.config(
     ...tseslint.configs.disableTypeChecked,
   },
   {
-    files: ['**/eslint.config.js', 'tooling/eslint-config/**'],
+    files: ['**/eslint.config.js', 'commitlint.config.js', 'tooling/eslint-config/**'],
     rules: {
       'import/no-default-export': 'off',
     },
