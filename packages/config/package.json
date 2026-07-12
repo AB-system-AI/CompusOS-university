@@ -2,7 +2,7 @@
   "name": "@campusos/config",
   "version": "0.0.0",
   "private": true,
-  "description": "Shared configuration utilities",
+  "description": "Enterprise configuration package for CampusOS",
   "license": "UNLICENSED",
   "type": "module",
   "main": "./dist/index.js",
@@ -18,7 +18,7 @@
     "lint": "eslint src --max-warnings 0",
     "lint:fix": "eslint src --fix --max-warnings 0",
     "typecheck": "tsc -b --emitDeclarationOnly false --noEmit",
-    "test": "node --input-type=module -e \"process.exit(0)\"",
+    "test": "bun test tests",
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
   "devDependencies": {
@@ -27,5 +27,8 @@
     "eslint": "^9.22.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
   }
 }

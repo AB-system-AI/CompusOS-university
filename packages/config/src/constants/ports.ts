@@ -1,0 +1,21 @@
+/** Default service ports used across CampusOS workspaces. */
+export const DEFAULT_PORTS = {
+  API_GATEWAY: 4000,
+  WEB: 3000,
+  ADMIN: 3001,
+  CMS: 3002,
+  MOBILE_METRO: 8081,
+  IDENTITY: 4100,
+  PLATFORM: 4101,
+  TENANT: 4102,
+  CONTENT: 4103,
+  TRUST: 4104,
+  SEARCH: 4105,
+  INSIGHT: 4106,
+  COMMUNICATE: 4107,
+  AI_GATEWAY: 4108,
+  WEB_SERVICE: 4109,
+  POSTGRES: 5432,
+  REDIS: 6379,
+  KAFKA: 9092,
+} as const;
