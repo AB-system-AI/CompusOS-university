@@ -1,0 +1,9 @@
+/** Shared operational limits. */
+export const LIMITS = {
+  MAX_STRING_LENGTH: 10_000,
+  MAX_SLUG_LENGTH: 128,
+  MAX_EMAIL_LENGTH: 320,
+  MAX_RETRY_ATTEMPTS: 5,
+  DEFAULT_RETRY_DELAY_MS: 250,
+  MAX_RETRY_DELAY_MS: 30_000,
+} as const;

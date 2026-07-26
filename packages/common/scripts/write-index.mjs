@@ -1,4 +1,9 @@
-// Result pattern
+import { writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+const content = `// Result pattern
 export {
   failure,
   isFailure,
@@ -64,3 +69,6 @@ export { compose, identity, noop, pipe } from './functional/index.js';
 
 // Constants
 export { LIMITS, PAGINATION, REGEX } from './constants/index.js';
+`;
+
+writeFileSync(join(root, 'src/index.ts'), content, 'utf8');
