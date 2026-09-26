@@ -1,4 +1,9 @@
-// Constants
+import { writeFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+const content = `// Constants
 export { DEFAULT_SCHEMA_VERSION, REQUIRED_ENVELOPE_FIELDS } from './constants/index.js';
 
 // Types
@@ -65,3 +70,6 @@ export {
   parseEventVersion,
   type SchemaVersionMetadata,
 } from './versioning/index.js';
+`;
+
+writeFileSync(join(root, 'src/index.ts'), content, 'utf8');

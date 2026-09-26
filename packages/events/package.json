@@ -2,7 +2,7 @@
   "name": "@campusos/events",
   "version": "0.0.0",
   "private": true,
-  "description": "Event schemas and envelope",
+  "description": "Shared event foundation for CampusOS services",
   "license": "UNLICENSED",
   "type": "module",
   "main": "./dist/index.js",
@@ -18,7 +18,7 @@
     "lint": "eslint src --max-warnings 0",
     "lint:fix": "eslint src --fix --max-warnings 0",
     "typecheck": "tsc -b --emitDeclarationOnly false --noEmit",
-    "test": "node --input-type=module -e \"process.exit(0)\"",
+    "test": "bun test tests",
     "clean": "rimraf dist tsconfig.tsbuildinfo"
   },
   "devDependencies": {
