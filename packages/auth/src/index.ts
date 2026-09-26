@@ -1,2 +1,92 @@
-/** Genesis placeholder */
-export const GENESIS_VERSION = '0.0.0' as const;
+export {
+  createAuthenticationContext,
+  type AuthenticatedPrincipal,
+  type AuthenticationContext,
+  type AuthenticationMethod,
+  type AuthenticationState,
+} from './authentication.js';
+export {
+  allow,
+  allOf,
+  anyOf,
+  createAuthorizationRequest,
+  deny,
+  denyByDefaultEvaluator,
+  not,
+  type AuthorizationDecision,
+  type AuthorizationEffect,
+  type AuthorizationEvaluator,
+  type AuthorizationPolicy,
+  type AuthorizationReason,
+  type AuthorizationRequest,
+} from './authorization.js';
+export { ClaimSet, type Claim, type ClaimValue, type StandardClaims } from './claims.js';
+export {
+  type AccessToken,
+  type AuthenticationResult,
+  type RefreshToken,
+  type Session,
+  type SessionManager,
+  type SessionStatus,
+  type SessionStore,
+  type TokenClaims,
+  type TokenIssuer,
+  type TokenType,
+  type TokenVerifier,
+} from './contracts.js';
+export {
+  createClientId,
+  createPrincipalId,
+  createSessionId,
+  createSubjectId,
+  createTenantId,
+  createUserId,
+  isClientId,
+  isPrincipalId,
+  isSessionId,
+  isSubjectId,
+  isTenantId,
+  isUserId,
+  type ClientId,
+  type PrincipalId,
+  type SessionId,
+  type SubjectId,
+  type TenantId,
+  type UserId,
+} from './identity.js';
+export {
+  createPermission,
+  hasAllPermissions,
+  hasAnyPermission,
+  hasPermission,
+  isPermission,
+  PermissionSet,
+  type Permission,
+  type PermissionId,
+} from './permissions.js';
+export {
+  createRole,
+  hasAllRoles,
+  hasAnyRole,
+  hasRole,
+  isRole,
+  RoleSet,
+  type Role,
+  type RoleId,
+} from './roles.js';
+export {
+  createScope,
+  hasAllScopes,
+  hasAnyScope,
+  hasScope,
+  isScope,
+  ScopeSet,
+  type Scope,
+} from './scopes.js';
+export {
+  AuthValidationError,
+  isValidAccessValue,
+  isValidIdentifier,
+  validationPatterns,
+  type ValidationResult,
+} from './validation.js';
