@@ -19,8 +19,8 @@
   },
   "devDependencies": {
     "@campusos/eslint-config": "workspace:*",
-    "eslint": "^9.22.0",
+    "eslint": "^10.11.0",
     "rimraf": "^6.0.1",
-    "typescript": "^5.8.2"
+    "typescript": "^7.0.2"
   }
 }
